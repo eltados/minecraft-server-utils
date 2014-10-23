@@ -1,0 +1,5 @@
+To get the overviewer script up and runnning follow these steps:
+
+1. add the "deb http://overviewer.org/debian ./" repo to your "/etc/apt/sources.list" file
+2. run "sudo apt-get update"
+3. run "sudo apt-get install overviewer"
