@@ -1,0 +1,14 @@
+<h2>Player Stats</h2>
+
+<% if ( defined?( @objective )).nil?  %>
+<% else %>
+<table>
+  <tbody>
+    <tr><th colspan='2'><%= @objectives[@objective].displayName %></th></tr>
+    <% player_scores = @objectives[@objective].player_scores %>
+    <% player_scores.each do |name, score| %>
+      <tr><td><%= name %></td><td><%= score %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

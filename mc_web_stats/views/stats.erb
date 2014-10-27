@@ -1,0 +1,14 @@
+<h2>Player Stats</h2>
+
+<a href="/sorted_stats">Sort Stats</a>
+
+<table>
+  <tbody>
+    <% @score_hash.each do |key, value| %>
+      <tr><th colspan='2'><%= key %></th></tr>
+      <% value.each do |name, score| %>
+        <tr><td><%= name %></td><td><%= score %></td></tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
