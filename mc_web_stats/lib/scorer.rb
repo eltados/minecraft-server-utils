@@ -10,10 +10,12 @@ def parse_file
     line = line.sub( '-', '' )
     after_string << line
   end
-  return YAML::load( after_string )
+   YAML::load( after_string ) # in ruby "return" is implicit . A method always return the last value
 end
 
-def get_score_hash
+def get_score_hash # in the ruby the convention is not to use "get" and "set" for the getter and setter
+# but instead to use the value directly for the getter for example  "def score_hash" and use the equal notation for the 
+# setter  for example  def score_hash=( value ) 
   yaml_string = `nbt2yaml /var/games/minecraft/backup/pLAN/pLAN/data/scoreboard.dat`
   scoreboard = YAML::load( yaml_string )
   score_hash = {}
